@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WeatherApp.Models.DayForecast>
+<div id="weat">
+    <div class="container-fluid" style="color:ghostwhite;font-size:150%;background-color:cornflowerblue; font-family:sans-serif;">
+        <br />
+        <h2 class="text-center"style="text-decoration:underline; font-size:170%; font-family:Arial">London's Weather Forcast</h2>
+        <br />
+        <div class="row">
+
+
+            @foreach (var item in Model.Skip(1).Take(4))
+            {
+            <div class="col-md-3">
+
+                @{
+                    string dayOfWeek = item.Date.Date.DayOfWeek.ToString();
+                    string date = item.Date.ToShortDateString();
+                }
+
+                <b><strong>@Html.DisplayFor(modelItem => dayOfWeek)</strong></b>
+                <br />
+                <b><strong>@Html.DisplayFor(modelItem => date)</strong></b>
+                <div class="climacon @item.Icon">
+                </div>
+
+                <br />
+                <strong> Max Temp:</strong> @Html.DisplayFor(modelItem => item.TemperatureHigh)℉
+                <br />
+                <strong>Min Temp:</strong> @Html.DisplayFor(modelItem => item.TemperatureLow)℉
+
+                <br /><br />
+
+                @Html.DisplayFor(modelItem => item.Summary)
+
+            </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+             

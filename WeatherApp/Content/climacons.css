@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'Climacons-Font';
+	src:url('../Fonts/climacons-webfont.eot');
+	src:url('../Fonts/climacons-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../Fonts/climacons-webfont.svg#Climacons-Font') format('svg'),
+		url('../Fonts/climacons-webfont.woff') format('woff'),
+		url('../Fonts/climacons-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.climacon:before{
+	font-family: 'Climacons-Font';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+    font-size: 5rem;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.climacon.cloudy:before,
+.climacon.partly-cloudy-day:before,
+.climacon.partly-cloudy-night:before {
+	content: "\e000";
+}
+
+.climacon.rain:before {
+	content: "\e003";
+}
+
+.climacon.snow:before {
+	content: "\e018";
+}
+
+.climacon.sleet:before {
+	content: "\e00f";
+}
+
+.climacon.wind:before {
+	content: "\e021";
+}
+
+.climacon.fog:before {
+	content: "\e01b";
+}
+
+.climacon.clear-day:before {
+	content: "\e028";
+}
+
+.climacon.clear-night:before {
+	content: "\e028";
+}
+
+.climacon.hail:before {
+	content: "\e012";
+}
+
+.climacon.tornado:before {
+	content: "\e037";
+}
+
+
+
+

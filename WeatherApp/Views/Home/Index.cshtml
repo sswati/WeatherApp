@@ -1,0 +1,11 @@
+﻿@model IEnumerable<WeatherApp.Models.DayForecast>
+
+
+@{
+   ViewBag.Title = "Home Page";
+}
+
+<body>
+    @Html.Partial("_weather", @Model)
+
+</body>
